@@ -1,0 +1,12 @@
+<ion-header-bar class="bar-stable">
+	<h1 class="title">Node Blog</h1>
+</ion-header-bar>
+<ion-content class="padding">
+	  <ion-list>
+			<ion-item class="item-avatar" ng-repeat="item in artikel" ui-sref='artikelDetail({index: item._id})'>
+				<img src="http://localhost:8080/files/{{item.photo}} " />
+				<h2>{{item.title}}</h2>
+				<p>{{item.description.substring(0, 20)}}... </p>
+			</ion-item>
+		</ion-list>
+</ion-content>
